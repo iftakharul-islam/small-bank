@@ -16,7 +16,9 @@ function login(){
         loginArea.style.display = "none"
 
     }else{
+        
         alert("Email or Password Not Matched")
+        password.value='';
     }
 }
 
@@ -39,6 +41,7 @@ addDeposit.addEventListener('click',function(){
     totalBalance+=parseInt(depositValue.value)
     total.innerHTML = "$"+totalBalance;
     deposit.innerHTML = "$"+totalDeposit;
+    depositValue.value=''
     console.log("Total Deposit = ",totalDeposit, "Total Balance = ",totalBalance)
 })
 
@@ -47,6 +50,7 @@ addWithdraw.addEventListener('click',function(){
     totalBalance-=parseInt(withdrawValue.value)
     total.innerHTML = "$"+totalBalance;
     withdraw.innerHTML = "$"+totalWithdraw;
+    withdrawValue.value=''
     console.log("Total Withdraw = ",totalWithdraw,"Total Balance = ",totalBalance)
 })
 
