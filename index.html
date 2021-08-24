@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Small Bank</title>
     <!-- Css Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <section id="login-area">
+        <div class="container d-flex align-items-center justify-content-center" style="height: 700px;">
+            <div class="row">
+                <h2 class="py-3 text-center ">Welcome to Small Bank</h2>
+                <div class="col-md-12 p-4 shadow">
+                    <h3 class="lead fw-bold mb-3">Login</h3>
+                    <div class="form-group ">
+                        <input type="text" id="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group py-4">
+                        <input type="password" id="password" class="form-control" placeholder="Password">
+                    </div>
+
+                    <div class="form-group">
+                        <button id="login" class="btn btn-success btn-sm"> Login </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="bank-area">
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-4 py-5" style="background-color: slateblue; color: white;">
+                    <h2>Deposit</h2>
+                    <h2 id="deposit">$00</h2>
+                </div>
+                <div class="col-4">
+                    <div class="mx-2 text-white p-5" style="background-color: lightsalmon;">
+                        <h2>Withdraw</h2>
+                        <h2 id="withdraw">$00</h2>
+                    </div>
+                </div>
+                <div class="col-4 py-5" style="background-color: orange; color: white;">
+                    <h2>Total</h2>
+                    <h2 id="total">$00</h2>
+                </div>
+            </div>
+            <div class="row py-5">
+                <h1>Transaction</h1>
+                <div class="col-md-6">
+                    <h5>Deposit</h5>
+                    
+                    <input type="text" required min="10" id="deposit-value">
+                    <button class="btn btn-success btn-sm" id="add-deposit">Deposit</button>
+                </div>
+                <div class="col-md-6">
+                    <h5>Withdraw</h5>
+                    <input type="text" min="10" id="withdraw-value"> 
+                    <button class="btn btn-warning btn-sm" id="add-withdraw">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
 </body>
+<input type="color" style="width: 100px; height: 100px; border: 0;" id="works2" value="#000002" oninput="changeColor(this.value);" />
 </html>
+
